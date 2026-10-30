@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nowire Informática | Soporte técnico remoto, páginas web y dominios</title>
+<meta name="description" content="Soporte técnico informático remoto en Capital Federal y GBA. También hacemos páginas web, registro de dominios y aplicaciones web.">
+<meta property="og:title" content="Nowire Informática">
+<meta property="og:description" content="Soporte técnico remoto rápido y económico. Páginas web, dominios y aplicaciones web.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nowire.com.ar/">
+<link rel="icon" type="image/png" href="logo-negro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10202b;--paper:#f5f7f4;--white:#fff;--teal:#0f8b6d;--teal-d:#0a6b54;--amber:#f2b134;--line:#d5dcd6;--muted:#4f5f69;
+--h:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;--b:'Source Sans 3','Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--b);font-size:18px;line-height:1.6;color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--h);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:14px}
+section{padding:76px 0}
+.lead{color:var(--muted);max-width:60ch}
+.btn{display:inline-block;font-family:var(--h);font-weight:700;font-size:1rem;text-decoration:none;padding:14px 24px;border-radius:8px;border:2px solid transparent;cursor:pointer}
+.btn-p{background:var(--teal);color:#fff}.btn-p:hover{background:var(--teal-d)}
+.btn-o{border-color:var(--ink)}.btn-o:hover{background:var(--ink);color:#fff}
+header{position:sticky;top:0;z-index:5;background:rgba(245,247,244,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:800;font-size:1.25rem;text-decoration:none;letter-spacing:-.01em}
+.logo img{display:block;width:40px;height:40px}
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.photo{width:100%;height:100%;max-height:360px;object-fit:cover;object-position:50% 30%;border-radius:12px;display:block}
+.flogo{display:block;height:46px;width:auto;margin-bottom:6px}
+nav a{text-decoration:none;font-weight:600;margin-left:22px;font-size:.98rem}
+nav a:hover{color:var(--teal)}
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.6vw,3.8rem);font-weight:800}
+.hero p{color:#c9d5db;margin:20px 0 30px;max-width:46ch;font-size:1.12rem}
+.hero .btn-o{border-color:#8fa3ad;color:#fff;margin-left:8px}
+.hero .btn-o:hover{background:#fff;color:var(--ink)}
+.session{background:#0b1720;border:1px solid #2a4150;border-radius:12px;overflow:hidden;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.bar{display:flex;gap:7px;align-items:center;padding:11px 14px;background:#142633;border-bottom:1px solid #2a4150;color:#8fa3ad;font-size:.8rem}
+.bar i{width:10px;height:10px;border-radius:50%;background:#35505f;display:block}
+.bar b{margin-left:8px;font-weight:400}
+.sbody{padding:20px;display:grid;gap:12px;color:#c9d5db}
+.sbody div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed #2a4150;padding-bottom:10px}
+.sbody em{font-style:normal;color:var(--amber);letter-spacing:.08em}
+.ok{color:#5fd6b3}
+.cur{display:inline-block;width:8px;height:1em;background:#5fd6b3;vertical-align:text-bottom;animation:bl 1.1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+/* services */
+.svc{border-top:2px solid var(--ink);margin-top:34px}
+.row{display:grid;grid-template-columns:260px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:1.4rem}
+.row p{color:var(--muted)}
+.row.main h3{color:var(--teal-d)}
+/* benefits */
+.ben{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 56px;margin-top:38px}
+.grid h3{font-size:1.2rem;margin-bottom:6px;padding-left:14px;border-left:4px solid var(--amber)}
+.grid p{color:var(--muted)}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px}
+.plan.hl{border:2px solid var(--teal)}
+.plan h3{font-size:1.3rem;margin-bottom:12px}
+.plan ul{list-style:none;color:var(--muted)}
+.plan li{padding:7px 0 7px 26px;position:relative;border-top:1px solid var(--line)}
+.plan li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
+.zone{margin-top:30px;color:var(--muted);font-size:1rem}
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact .lead{color:#c9d5db}
+form{background:var(--white);color:var(--ink);padding:28px;border-radius:12px;display:grid;gap:16px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px;border:1.5px solid #b9c4bd;border-radius:8px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{width:100%;text-align:center;font-size:1.05rem}
+.note{font-size:.88rem;color:var(--muted);text-align:center}
+.err{color:#b3261e;font-size:.9rem;min-height:1.2em}
+footer{background:#0b1720;color:#9fb1ba;padding:30px 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer a{color:#fff}
+@media(max-width:860px){
+.hero .wrap,.contact .wrap,.intro{grid-template-columns:1fr}
+.photo{max-height:260px}
+.logo{font-size:1.05rem}
+.row{grid-template-columns:1fr;gap:6px}
+.grid,.plans{grid-template-columns:1fr}
+nav a:not(.cta){display:none}
+section{padding:56px 0}
+.hero .btn-o{margin:12px 0 0}
+}
+@media(prefers-reduced-motion:reduce){.cur{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#inicio"><img src="logo-negro.png" alt="" width="40" height="40"><span>Nowire Informática</span></a>
+<nav><a href="#servicios">Servicios</a><a href="#beneficios">Soporte remoto</a><a href="#modalidades">Modalidades</a><a class="cta" href="#contacto">Contacto</a></nav>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+<div>
+<h1>Tu computadora, resuelta a distancia.</h1>
+<p>Soporte técnico informático remoto para hogares y empresas. Nos conectamos, solucionamos el problema y seguís trabajando. Además, creamos tu página web, registramos tu dominio y desarrollamos aplicaciones web.</p>
+<a class="btn btn-p" href="#contacto">Consultar por WhatsApp</a>
+<a class="btn btn-o" href="#servicios">Ver servicios</a>
+</div>
+<div class="session" aria-hidden="true">
+<div class="bar"><i></i><i></i><i></i><b>Sesión de soporte remoto</b></div>
+<div class="sbody">
+<div><span>ID</span><em>482 951 307</em></div>
+<div><span>Clave</span><em>••••••</em></div>
+<div><span>Estado</span><span class="ok">Conectado</span></div>
+<div><span>Tarea</span><span>Diagnóstico y reparación</span></div>
+<div><span>Tiempo estimado</span><span>Hasta 1 hora<span class="cur"></span></span></div>
+</div></div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+<div class="intro">
+<div>
+<h2>Qué hacemos</h2>
+<p class="lead">Soporte técnico es lo que mejor hacemos, y también te ayudamos a tener presencia en internet.</p>
+</div>
+<img class="photo" src="soporte.webp" alt="Dos técnicos de Nowire trabajando con una notebook junto a un rack de servidores" width="800" height="1029" loading="lazy">
+</div>
+<div class="svc">
+<div class="row main"><h3>Soporte técnico remoto</h3><p>Diagnóstico, reparación y configuración de PC y servidores a distancia. Limpieza y mantenimiento, desinfección de virus, malware y troyanos, y puesta a punto de equipos desde cero.</p></div>
+<div class="row"><h3>Páginas web</h3><p>Sitios profesionales para tu negocio o estudio, que se ven bien en celular y en computadora, listos para que tus clientes te encuentren y te escriban.</p></div>
+<div class="row"><h3>Registro de dominios</h3><p>Elegimos y registramos tu dominio (.com.ar, .com y otros) y lo dejamos funcionando con tu sitio y tus casillas de correo.</p></div>
+<div class="row"><h3>Aplicaciones web</h3><p>Sistemas a medida que se usan desde el navegador: gestión interna, turnos, formularios, paneles y todo lo que necesite tu operación.</p></div>
+</div></div></section>
+
+<section class="ben" id="beneficios"><div class="wrap">
+<h2>Por qué elegir soporte remoto</h2>
+<p class="lead">Hacemos lo mismo que si estuviéramos frente a tu equipo, sin traslados ni esperas.</p>
+<div class="grid">
+<div><h3>Sencillo</h3><p>Descargás el acceso remoto y listo. Desde ahí trabajamos sobre tu PC como si estuviéramos sentados al lado.</p></div>
+<div><h3>Rápido</h3><p>Con una llamada coordinamos el mismo día y en el horario que mejor te quede.</p></div>
+<div><h3>Económico</h3><p>Costo bajo y sin viáticos ni recargos por traslado.</p></div>
+<div><h3>Fácil</h3><p>No necesitás conocimientos técnicos: solo nos pasás el ID y la clave que te muestra el programa.</p></div>
+<div><h3>Preventivo</h3><p>Podemos revisar tu PC o servidor fuera de tu horario laboral, para que no haya sorpresas cuando más lo necesitás.</p></div>
+<div><h3>Seguro</h3><p>Descargás el software directamente desde nuestros servidores y vos controlás cuándo termina la sesión.</p></div>
+</div>
+<p style="margin-top:38px"><a class="btn btn-p" href="https://remotos.nowire.com.ar/agentinvite?c=inK3WHYrxphY7p0SXq0UAV25gSgi$XuJ86YzzLdaE9MCBaM1tSrGd6Vr9AbCi0KDPu5BSycOWZd3WOzm@8FbJsBNjwWuN8mbIhDXcmke4Ai5CH37ZXTUkur7igzg6jR9yTsEUAsrdx1ysjtXSiwW2fIsYsKCrouWCptKJlXenePJd$wOvt3ddpv1kNxvm4cgNWW8YoSqZvyBnzL$">Descargar acceso remoto</a></p>
+</div></section>
+
+<section id="modalidades"><div class="wrap">
+<h2>Modalidades de servicio</h2>
+<p class="lead">Elegí la que mejor se adapte a tu hogar, empresa o trabajo.</p>
+<div class="plans">
+<div class="plan"><h3>Service a distancia</h3><ul><li>Evaluación y diagnóstico</li><li>Solución a distancia</li><li>Reparación del problema</li><li>Hasta 1 hora</li></ul></div>
+<div class="plan"><h3>Service presencial</h3><ul><li>Evaluación y diagnóstico</li><li>Reparación del problema</li><li>Asesoramiento y prevención</li><li>Hasta 1 hora</li></ul></div>
+<div class="plan hl"><h3>Abono mensual</h3><ul><li>Evaluación y diagnóstico</li><li>Backups automáticos</li><li>Sincronización en la nube</li><li>Control y test del sistema</li></ul></div>
+</div>
+<p class="zone"><strong>Zonas de atención presencial:</strong> Capital Federal y GBA, incluyendo Villa Lugano, Villa Riachuelo, Piedrabuena, Villa Devoto, Villa Madero, Tapiales, Belgrano, Villa Urquiza, Flores, Floresta, Liniers, Villa Luro y Mataderos. Consultá por tu zona. El soporte remoto llega a todo el país.</p>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+<div>
+<h2>Contanos qué necesitás</h2>
+<p class="lead">Completá el formulario y se abre WhatsApp con tu mensaje listo para enviar. Te respondemos para coordinar día y horario.</p>
+<p class="lead" style="margin-top:18px">Si ya sos cliente y quedaste conforme, <a href="https://g.page/r/CdLlvzVphDHhEBM/review">dejanos tu reseña</a>.</p>
+</div>
+<form id="wa" novalidate>
+<label for="n">Tu nombre<input id="n" name="n" autocomplete="name" required></label>
+<label for="s">¿Qué necesitás?
+<select id="s" name="s">
+<option>Soporte técnico remoto</option><option>Servicio presencial</option><option>Abono mensual</option>
+<option>Página web</option><option>Registro de dominio</option><option>Aplicación web</option><option>Otra consulta</option>
+</select></label>
+<label for="m">Mensaje<textarea id="m" name="m" placeholder="Contanos brevemente tu problema o proyecto"></textarea></label>
+<div class="err" id="e" role="alert"></div>
+<button class="btn btn-p" type="submit">Enviar por WhatsApp</button>
+<p class="note">Se abrirá WhatsApp para que confirmes el envío.</p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<span><img class="flogo" src="logo-blanco.png" alt="Nowire" width="134" height="46">© 2026 Nowire Informática. Todos los derechos reservados.</span>
+<span><a href="https://wa.me/541139140275">11 3914 0275</a> · <a href="https://wa.me/541173684297">11 7368 4297</a> · <a href="https://www.instagram.com/nowire.ar/">Instagram</a> · <a href="https://www.facebook.com/nowire.ar">Facebook</a> · <a href="https://www.tiktok.com/@nowire.ar">TikTok</a></span>
+</div></footer>
+
+<script>
+document.getElementById('wa').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var n=this.n.value.trim(),s=this.s.value,m=this.m.value.trim(),e=document.getElementById('e');
+  if(!n){e.textContent='Escribí tu nombre para continuar.';this.n.focus();return}
+  e.textContent='';
+  var t='Hola Nowire, soy '+n+'. Consulta sobre: '+s+'.'+(m?'\n'+m:'');
+  window.open('https://wa.me/541139140275?text='+encodeURIComponent(t),'_blank','noopener');
+});
+</script>
+</body>
+</html>
