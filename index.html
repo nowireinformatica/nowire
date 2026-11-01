@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> 
 <style>
 :root{--ink:#10202b;--paper:#f5f7f4;--white:#fff;--teal:#0f8b6d;--teal-d:#0a6b54;--amber:#f2b134;--line:#d5dcd6;--muted:#4f5f69;
 --h:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;--b:'Source Sans 3','Segoe UI',Arial,sans-serif}
@@ -181,6 +182,10 @@ section{padding:56px 0}
 <option>Página web</option><option>Registro de dominio</option><option>Aplicación web</option><option>Otra consulta</option>
 </select></label>
 <label for="m">Mensaje<textarea id="m" name="m" placeholder="Contanos brevemente tu problema o proyecto"></textarea></label>
+
+<!-- Contenedor Turnstile -->
+<div class="cf-turnstile" data-sitekey="TU_SITE_KEY_AQUI" data-theme="light"></div>
+
 <div class="err" id="e" role="alert"></div>
 <button class="btn btn-p" type="submit">Enviar por WhatsApp</button>
 <p class="note">Se abrirá WhatsApp para que confirmes el envío.</p>
@@ -193,15 +198,21 @@ section{padding:56px 0}
 <span><a href="https://wa.me/541139140275">11 3914 0275</a> · <a href="https://wa.me/541173684297">11 7368 4297</a> · <a href="https://www.instagram.com/nowire.ar/">Instagram</a> · <a href="https://www.facebook.com/nowire.ar">Facebook</a> · <a href="https://www.tiktok.com/@nowire.ar">TikTok</a></span>
 </div></footer>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 document.getElementById('wa').addEventListener('submit',function(ev){
   ev.preventDefault();
   var n=this.n.value.trim(),s=this.s.value,m=this.m.value.trim(),e=document.getElementById('e');
   if(!n){e.textContent='Escribí tu nombre para continuar.';this.n.focus();return}
+
+  var turnstileResponse = new FormData(this).get('cf-turnstile-response');
+  if(!turnstileResponse){
+    e.textContent='Por favor, completá la verificación anti-bot.';
+    return;
+  }
+
   e.textContent='';
   var t='Hola Nowire, soy '+n+'. Consulta sobre: '+s+'.'+(m?'\n'+m:'');
   window.open('https://wa.me/541173684297?text='+encodeURIComponent(t),'_blank','noopener');
 });
 </script>
-</body>
-</html>
